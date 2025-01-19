@@ -1,3 +1,6 @@
 {
-  "git.branchProtection": []
+  "git.branchProtection": [],
+  "[c]": {
+    "editor.formatOnSave": false
+  }
 }
