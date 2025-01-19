@@ -34,7 +34,20 @@ int repeatLine() {
     printf("Your input: %s", line);
 }
 
+/// Prints the contents of a text file.
+/// For best results, the file should end with a blank line.
+int readFile() {
+    char line[1000];
+    FILE *hand;
+    hand = fopen("romeo.txt", "r");
+    while (fgets(line, 1000, hand) != NULL)
+    {
+        printf("%s", line);
+    }
+    
+}
+
 int main() {
     printf("Hello world\n");
-    repeatLine();
+    readFile();
 }
