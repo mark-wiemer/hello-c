@@ -5,7 +5,17 @@
 // View current default compiler settings with `gcc -v` and `echo | gcc -dM -E -x c - > out.txt`
 #include <stdio.h>
 
-/// Converts US floor number to European floor number
+/// Prints the first 100 characters of the user's name
+/// - Assumes user input is a single word
+int helloUser() {
+    char name[100];
+    printf("What's your first name? ");
+    scanf("%100s", name);
+    printf("Hello %s!\n", name);
+}
+
+/// Converts US floor number to European floor number.
+/// - Assumes user input is a number
 int usFloorToEuFloor() {
     int usf, euf;
     printf("Enter US floor: ");
@@ -16,5 +26,5 @@ int usFloorToEuFloor() {
 
 int main() {
     printf("Hello world\n");
-    usFloorToEuFloor();
+    helloUser();
 }
