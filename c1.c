@@ -68,7 +68,25 @@ int findMaxAndMin() {
     printf("Min: %d\n", min);
 }
 
+int guessingGame() {
+    int magicNumber = 42; // we'll learn about randomness later
+    int guess;
+    printf("Try to guess the number I'm thinking of!\n");
+    while (scanf("%d", &guess) != EOF) {
+        if (guess == magicNumber) {
+            printf("Nice work!\n");
+            break;
+        }
+        else if (guess < magicNumber) {
+            printf("Too low - guess again\n");
+        }
+        else if (guess > magicNumber) {
+            printf("Too high - guess again\n");
+        }
+    }
+}
+
 int main() {
     printf("Hello world\n");
-    findMaxAndMin();
+    guessingGame();
 }
