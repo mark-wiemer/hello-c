@@ -86,6 +86,8 @@ int guessingGame() {
     }
 }
 
+// This looks to be unusual syntax from Dr. Chuck
+// - No need to declare the function again within this one
 int myMultOuter() {
     int myMultInner();
     int result;
@@ -93,6 +95,7 @@ int myMultOuter() {
     printf("Answer: %d\n", result);
 }
 
+// int myMultInner(int a, int b) // also works and is more common 
 int myMultInner(a, b)
     int a,b;
 {
