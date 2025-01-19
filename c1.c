@@ -80,7 +80,7 @@ int guessingGame() {
         else if (guess < magicNumber) {
             printf("Too low - guess again\n");
         }
-        else if (guess > magicNumber) {
+        else {
             printf("Too high - guess again\n");
         }
     }
