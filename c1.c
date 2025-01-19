@@ -47,7 +47,14 @@ int readFile() {
     
 }
 
+int countedLoop() {
+    int i;
+    for (i = 0; i < 5; i++) {
+        printf("%d\n", i);
+    }
+}
+
 int main() {
     printf("Hello world\n");
-    readFile();
+    countedLoop();
 }
