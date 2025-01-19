@@ -24,7 +24,17 @@ int helloUser() {
     printf("Hello %s!\n", name);
 }
 
+
+
+/// Repeats the first 1000 chars of a line of text that the user inputs.
+int repeatLine() {
+    char line[1000];
+    printf("Enter a line of text: ");
+    scanf("%[^\n]1000s", line);
+    printf("Your input: %s\n", line);
+}
+
 int main() {
     printf("Hello world\n");
-    helloUser();
+    repeatLine();
 }
