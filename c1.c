@@ -86,7 +86,21 @@ int guessingGame() {
     }
 }
 
+int myMultOuter() {
+    int myMultInner();
+    int result;
+    result = myMultInner(6, 7);
+    printf("Answer: %d\n", result);
+}
+
+int myMultInner(a, b)
+    int a,b;
+{
+    int c = a * b;
+    return c;
+}
+
 int main() {
     printf("Hello world\n");
-    guessingGame();
+    myMultOuter();
 }
