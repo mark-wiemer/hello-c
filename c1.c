@@ -54,7 +54,21 @@ int countedLoop() {
     }
 }
 
+/// Prints the max and min of the input list of numbers.
+/// Use `Ctrl+D` to send the EOF signal to this func
+int findMaxAndMin() {
+    int first = 1;
+    int max, min, num;
+    while (scanf("%d", &num) != EOF) {
+        if (first || num > max) max = num;
+        if (first || num < min) min = num;
+        first = 0;
+    }
+    printf("Max: %d\n", max);
+    printf("Min: %d\n", min);
+}
+
 int main() {
     printf("Hello world\n");
-    countedLoop();
+    findMaxAndMin();
 }
