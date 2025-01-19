@@ -5,6 +5,7 @@
 // View current default compiler settings with `gcc -v` and `echo | gcc -dM -E -x c - > out.txt`
 #include <stdio.h>
 
+/// Converts US floor number to European floor number
 int usFloorToEuFloor() {
     int usf, euf;
     printf("Enter US floor: ");
