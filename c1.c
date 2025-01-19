@@ -5,6 +5,15 @@
 // View current default compiler settings with `gcc -v` and `echo | gcc -dM -E -x c - > out.txt`
 #include <stdio.h>
 
+int usFloorToEuFloor() {
+    int usf, euf;
+    printf("Enter US floor: ");
+    scanf("%d", &usf);
+    euf = usf - 1;
+    printf("EU floor: %d\n", euf);
+}
+
 int main() {
     printf("Hello world\n");
+    usFloorToEuFloor();
 }
