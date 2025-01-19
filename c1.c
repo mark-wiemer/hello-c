@@ -9,6 +9,9 @@ int py_len(char self[])
     return i;
 }
 
+// https://youtu.be/PaPN51Mm5qQ?si=DzbcMMOjOCbJ4XF4&t=7106
+// Assignment: Reverse a string
+
 int main() {
     char x[] = "Hello";
     printf("%s %d\n", x, py_len(x));
