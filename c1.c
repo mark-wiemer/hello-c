@@ -30,7 +30,7 @@ int helloUser() {
 int repeatLine() {
     char line[1000];
     printf("Enter a line of text: ");
-    fgets(line, 1000, stdin);
+    fgets(line, 1000, stdin); // others are stdout, stderr :)
     printf("Your input: %s", line);
 }
 
