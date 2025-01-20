@@ -16,12 +16,12 @@ char* reverseString(char string[]) {
     char dupe[len];
     // use `i <= len` to include the null terminator
     // suppose len == 10
-    // dupe[10] = NULL
+    // dupe[10] = 0
     // dupe[9] = string[0]
     for (int i = 0; i < len; i++) {
         dupe[len - i - 1] = string[i];
     }
-    dupe[len] = NULL;
+    dupe[len] = 0;
     string = dupe;
 }
 
