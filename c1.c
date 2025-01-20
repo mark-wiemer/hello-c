@@ -33,6 +33,7 @@ int main() {
     char string[1000];
     printf("Enter a string to reverse: ");
     fgets(string, 1000, stdin);
+    string[py_len(string) - 1] = 0; // trim newline from fgets
     char* reversed = reverseString(string);
     printf("Reversed: %s\n", reversed);
 }
