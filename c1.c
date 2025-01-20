@@ -11,18 +11,24 @@ int py_len(char self[])
 
 // https://youtu.be/PaPN51Mm5qQ?si=DzbcMMOjOCbJ4XF4&t=7106
 // Assignment: Reverse a string
+// Constraint: in-place!
 char* reverseString(char string[]) {
     int len = py_len(string);
-    char dupe[len];
-    // use `i <= len` to include the null terminator
-    // suppose len == 10
-    // dupe[10] = 0
-    // dupe[9] = string[0]
-    for (int i = 0; i < len; i++) {
-        dupe[len - i - 1] = string[i];
+    if (len <= 1) return string;
+    int isOdd = len % 2;
+
+    // Even: suppose len == 6
+    // then len/2 = 3
+    // swap 0 with 5, 1 with 4, 2 with 3
+    // Odd: suppose len == 5
+    // then len/2 = 2
+    // swap 0 with 4, 1 with 3
+    for (int i = 0; i < len/2; i++) {
+        char tmp = string[i];
+        int swapIndex = len - i - 1;
+        string[i] = string[swapIndex];
+        string[swapIndex] = tmp;
     }
-    dupe[len] = 0;
-    string = dupe;
     return string;
 }
 
