@@ -11,8 +11,23 @@ int py_len(char self[])
 
 // https://youtu.be/PaPN51Mm5qQ?si=DzbcMMOjOCbJ4XF4&t=7106
 // Assignment: Reverse a string
+char* reverseString(char string[]) {
+    int len = py_len(string);
+    char dupe[len];
+    // use `i <= len` to include the null terminator
+    // suppose len == 10
+    // dupe[10] = NULL
+    // dupe[9] = string[0]
+    for (int i = 0; i < len; i++) {
+        dupe[len - i - 1] = string[i];
+    }
+    dupe[len] = NULL;
+    string = dupe;
+}
 
 int main() {
-    char x[] = "Hello";
-    printf("%s %d\n", x, py_len(x));
+    char string[1000];
+    printf("Enter a string to reverse: ");
+    fgets(string, 1000, stdin);
+    printf(reverseString(string));
 }
