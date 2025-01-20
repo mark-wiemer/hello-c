@@ -14,9 +14,6 @@ int py_len(char self[])
 // Constraint: in-place!
 char* reverseString(char string[]) {
     int len = py_len(string);
-    if (len <= 1) return string;
-    int isOdd = len % 2;
-
     // Even: suppose len == 6
     // then len/2 = 3
     // swap 0 with 5, 1 with 4, 2 with 3
