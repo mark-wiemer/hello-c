@@ -23,11 +23,13 @@ char* reverseString(char string[]) {
     }
     dupe[len] = 0;
     string = dupe;
+    return string;
 }
 
 int main() {
     char string[1000];
     printf("Enter a string to reverse: ");
     fgets(string, 1000, stdin);
-    printf(reverseString(string));
+    char* reversed = reverseString(string);
+    printf("Reversed: %s\n", reversed);
 }
