@@ -100,6 +100,25 @@ int ex_1_5() {
     }
 }
 
+// Write a program to count blanks, tabs, and newlines.
+// Ctrl+D to send EOF
+int ex_1_6() {
+    int c, nl;
+
+    nl = 0;
+    int nspaces = 0;
+    int ntabs = 0;
+    while ((c = getchar()) != EOF) {
+        if (c == ' ')
+            ++nspaces;
+        else if (c == '\t')
+            ++ntabs;
+        else if (c == '\n')
+            ++nl;
+    }
+    printf("Spaces: %d\nTabs: %d\nNewlines: %d\n", nspaces, ntabs, nl);
+}
+
 int main() {
-    ex_1_5();
+    ex_1_6();
 }
