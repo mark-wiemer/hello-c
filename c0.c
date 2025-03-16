@@ -101,11 +101,6 @@ int myMultInner(a, b)
     return c;
 }
 
-// Experiment to find out what happens when printf's argument string contains \x, where x is some character not listed above.
-int ex_1_2() {
-    printf("Hi .\i. there");
-}
-
 int main() {
-    ex_1_2();
+    myMultOuter();
 }
