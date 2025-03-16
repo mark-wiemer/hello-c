@@ -138,6 +138,25 @@ int ex_1_7() {
     printf("\nShortened output:\n%s\n", str);
 }
 
+// "Write a program to replace each tab by the three-character sequence:
+// >, backspace, -, which prints as >, and each backspace by the similar sequence <. This makes tabs and backspaces visible."
+// Doesn't seem to work as expected, something may have changed in the last century
+// Instead we'll print a literal backslash followed by t or b
+int ex_1_8() {
+    int c;
+    while ((c = getchar()) != EOF) {
+        if (c == '\t') {
+            putchar('\\');
+            putchar('t');
+        } else if (c == '\b') {
+            putchar('\\');
+            putchar('b');
+        } else {
+            putchar(c);
+        }
+    }
+}
+
 int main() {
-    ex_1_7();
+    ex_1_8();
 }
