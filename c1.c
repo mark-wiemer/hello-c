@@ -119,6 +119,25 @@ int ex_1_6() {
     printf("Spaces: %d\nTabs: %d\nNewlines: %d\n", nspaces, ntabs, nl);
 }
 
+// Write a program to copy its input to its output, replacing each string of one or more blanks by a single blank.
+// Ctrl+D to send EOF
+int ex_1_7() {
+    char str[1000];
+    int c, i;
+    int lastWasSpace = 0;
+    for (i = 0; (c = getchar()) != EOF; i++) {
+        if (lastWasSpace == 1 && c == ' ') {
+            i--;
+            lastWasSpace = 1;
+        } else {
+            str[i] = c;
+        }
+        lastWasSpace = c == ' ';
+    }
+    str[i + 1] = 0; // don't forget to null-terminate your strings!
+    printf("\nShortened output:\n%s\n", str);
+}
+
 int main() {
-    ex_1_6();
+    ex_1_7();
 }
