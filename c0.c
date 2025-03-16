@@ -24,8 +24,6 @@ int helloUser() {
     printf("Hello %s!\n", name);
 }
 
-
-
 /// Repeats the first 1000 chars of a line of text that the user inputs.
 int repeatLine() {
     char line[1000];
@@ -103,7 +101,11 @@ int myMultInner(a, b)
     return c;
 }
 
+// Experiment to find out what happens when printf's argument string contains \x, where x is some character not listed above.
+int ex_1_2() {
+    printf("Hi .\i. there");
+}
+
 int main() {
-    printf("Hello world\n");
-    myMultOuter();
+    ex_1_2();
 }
