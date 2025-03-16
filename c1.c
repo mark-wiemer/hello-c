@@ -29,16 +29,39 @@ char* reverseString(char string[]) {
     return string;
 }
 
-// Experiment to find out what happens when printf's argument string contains \x, where x is some character not listed above.
-int ex_1_2() {
-    printf("Hi .\i. there");
-}
-
-int main() {
+int ex_reverseString() {
     char string[1000];
     printf("Enter a string to reverse: ");
     fgets(string, 1000, stdin);
     string[py_len(string) - 1] = 0; // trim newline from fgets
     char* reversed = reverseString(string);
     printf("Reversed: %s\n", reversed);
+}
+
+// Experiment to find out what happens when printf's argument string contains \x, where x is some character not listed above.
+int ex_1_2() {
+    // printf("Hi .\i. there");
+}
+
+// Modify the temperature conversion program to print a heading above the table.
+int ex_1_3() {
+    /* print Fahrenheit-Celsius table
+    for f = 0, 20, ..., 300 */
+    int lower, upper, step;
+    float fahr, celsius;
+    lower = 0; /* lower limit of temperature table */
+    upper = 300; /* upper limit */
+    step = 20; /* step size */
+    fahr = lower;
+
+    printf("Fahr Celsius\n");
+    while (fahr <= upper) {
+        celsius = (5.0/9.0) * (fahr-32.0);
+        printf("%4.0f  %6.1f\n", fahr, celsius);
+        fahr = fahr + step;
+    }
+}
+
+int main() {
+    ex_1_3();
 }
