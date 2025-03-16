@@ -62,6 +62,26 @@ int ex_1_3() {
     }
 }
 
+// Write a program to print the corresponding Celsius to Fahrenheit table.
+int ex_1_4() {
+
+    /* print Celsius-Fahrenheit table
+    for c = -20, -10, ..., 150 */
+    int lower, upper, step;
+    float fahr, celsius;
+    lower = -20; /* lower limit of temperature table */
+    upper = 40; /* upper limit */
+    step = 5; /* step size */
+    celsius = lower;
+
+    printf("Celsius  Fahr\n");
+    while (celsius <= upper) {
+        fahr = (celsius) * (9.0/5.0) + 32.0;
+        printf("%7.0f  %4.0f\n", celsius, fahr);
+        celsius = celsius + step;
+    }
+}
+
 int main() {
-    ex_1_3();
+    ex_1_4();
 }
